@@ -181,6 +181,28 @@
           <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://medicare.healthsherpa.com/intake/patrick-mackin" target="_blank" rel="noopener">Test Medicare Intake</a>
           <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://www.planenroll.com/AgentBio?purl=Patrick-Mackin" target="_blank" rel="noopener">Test PlanEnroll</a>
         </div>
+        <div class="mt-4 space-y-2">
+          <p class="text-sm font-semibold">Live link verification</p>
+          <div class="grid sm:grid-cols-2 gap-2 text-xs font-semibold">
+            <div class="glass rounded-xl p-3 flex justify-between items-center border border-slate-200/10" data-check="aca-funnel">
+              <span>ACA Funnel</span>
+              <span class="status-dot w-2 h-2 rounded-full bg-amber-300/80"></span>
+            </div>
+            <div class="glass rounded-xl p-3 flex justify-between items-center border border-slate-200/10" data-check="aca-onex">
+              <span>ACA HealthSherpa</span>
+              <span class="status-dot w-2 h-2 rounded-full bg-amber-300/80"></span>
+            </div>
+            <div class="glass rounded-xl p-3 flex justify-between items-center border border-slate-200/10" data-check="medicare-intake">
+              <span>Medicare Intake</span>
+              <span class="status-dot w-2 h-2 rounded-full bg-amber-300/80"></span>
+            </div>
+            <div class="glass rounded-xl p-3 flex justify-between items-center border border-slate-200/10" data-check="planenroll">
+              <span>PlanEnroll</span>
+              <span class="status-dot w-2 h-2 rounded-full bg-amber-300/80"></span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-200/70">Green checks appear when the required CTAs exist on this page. If you see amber, refresh or confirm the link is present.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -197,5 +219,54 @@
       <a class="hover:text-white" href="https://www.planenroll.com/AgentBio?purl=Patrick-Mackin" target="_blank" rel="noopener">PlanEnroll</a>
     </div>
   </footer>
+
+  <script>
+    const linkChecks = [
+      {
+        id: 'aca-funnel',
+        href: 'https://pmackiniv.github.io/vital-edge-HealthSherpa/',
+        label: 'ACA Funnel'
+      },
+      {
+        id: 'aca-onex',
+        href: 'https://www.healthsherpa.com/agents/patrick-mackin-iv/enrollment_leads?_agent_id=patrick-mackin-iv&enrollment_leads%5Barchived%5D=not_archived&enrollment_leads%5BoffEx%5D=false&enrollment_leads%5Bexchange%5D%5B%5D=onEx&enrollment_leads%5BsharedBook%5D=false&enrollment_leads%5BfullBook%5D=false&enrollment_leads%5Bsearch%5D=true&term=&desc%5B%5D=lead_updated_at&agent_id=patrick-mackin-iv&page=1&per_page=10',
+        label: 'ACA HealthSherpa'
+      },
+      {
+        id: 'medicare-intake',
+        href: 'https://medicare.healthsherpa.com/intake/patrick-mackin',
+        label: 'Medicare Intake'
+      },
+      {
+        id: 'planenroll',
+        href: 'https://www.planenroll.com/AgentBio?purl=Patrick-Mackin',
+        label: 'PlanEnroll'
+      }
+    ];
+
+    linkChecks.forEach(({ id, href, label }) => {
+      const statusEl = document.querySelector(`[data-check="${id}"]`);
+      if (!statusEl) return;
+      const link = document.querySelector(`a[href="${href}"]`);
+      const dot = statusEl.querySelector('.status-dot');
+
+      if (link) {
+        statusEl.classList.add('border-emerald-300/60', 'bg-emerald-300/10');
+        statusEl.classList.remove('border-slate-200/10');
+        if (dot) {
+          dot.classList.remove('bg-amber-300/80');
+          dot.classList.add('bg-emerald-300');
+        }
+        statusEl.setAttribute('aria-label', `${label} link found on page`);
+      } else {
+        statusEl.classList.add('border-amber-300/60', 'bg-amber-300/10');
+        if (dot) {
+          dot.classList.remove('bg-emerald-300');
+          dot.classList.add('bg-amber-300');
+        }
+        statusEl.setAttribute('aria-label', `${label} link missing on page`);
+      }
+    });
+  </script>
 </body>
 </html>
