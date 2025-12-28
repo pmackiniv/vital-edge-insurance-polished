@@ -1,21 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Medicare Options - Vital Edge Insurance</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medicare Options | Vital Edge Insurance</title>
+  <meta name="description" content="Explore Medicare options with Vital Edge Insurance—agent-first, compliant, and backed by verified HealthSherpa and PlanEnroll links." />
+  <meta name="keywords" content="Medicare enrollment, HealthSherpa Medicare, PlanEnroll, agent first, Vital Edge Insurance" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="description" content="Explore Medicare options with Vital Edge Insurance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0e1830 0%, #0c2b57 35%, #0c3f77 70%, #0a5688 100%);
+      color: #e9f4ff;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(14px);
+    }
+    .accent-gradient {
+      background: linear-gradient(90deg, #6ddcff 0%, #7f60f9 50%, #f26bff 100%);
+    }
+    .section-heading {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-ornament {
+      position: absolute;
+      inset: -140px auto auto -160px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(111, 197, 255, 0.35) 0%, rgba(10, 54, 109, 0) 60%);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-blue-900 text-white p-4">
-    <h1 class="text-3xl font-bold">Medicare Options</h1>
-  </header>
-  <main class="p-8">
-    <p class="mb-6">Navigate your Medicare choices confidently. Choose from our available enrollment links below:</p>
-    <div class="flex flex-col space-y-4">
-      <a href="https://healthsherpa-medicare.example" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg">HealthSherpa Medicare</a>
-      <a href="https://planenroll.example" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg">PlanEnroll</a>
+<body class="min-h-screen">
+  <div class="hero-ornament"></div>
+  <header class="max-w-6xl mx-auto px-6 pt-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p class="text-xs text-slate-200/75 tracking-widest">Vital Edge Insurance</p>
+      <h1 class="text-3xl md:text-4xl font-bold">Medicare Options</h1>
+      <p class="text-slate-200/80 mt-2 max-w-2xl">Trusted Medicare guidance with agent-led intake, compliant enrollments, and seamless coordination for mixed ACA/Medicare households.</p>
     </div>
+    <nav class="flex flex-wrap gap-3 text-sm font-semibold">
+      <a class="px-4 py-2 rounded-full glass hover:shadow-lg transition" href="index.html">Home</a>
+      <a class="px-4 py-2 rounded-full glass hover:shadow-lg transition" href="#cta">Enroll</a>
+      <a class="px-4 py-2 rounded-full glass hover:shadow-lg transition" href="#mission">Mission</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pb-16">
+    <section class="relative overflow-hidden rounded-3xl glass mt-10 p-8 md:p-12">
+      <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent pointer-events-none"></div>
+      <div class="relative grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-6">
+          <p class="section-heading text-xs tracking-widest text-sky-100">Medicare with confidence</p>
+          <h2 class="text-4xl font-bold leading-tight">Agent-first Medicare intake and enrollment.</h2>
+          <p class="text-lg text-slate-100/85">We pair Medicare expertise with clear steps—so beneficiaries, caregivers, and brokers can act quickly and accurately.</p>
+          <div class="flex flex-wrap gap-3" id="cta">
+            <a href="https://medicare.healthsherpa.com/intake/patrick-mackin" class="px-5 py-3 rounded-full accent-gradient text-slate-900 font-bold shadow-lg hover:shadow-xl transition" target="_blank" rel="noopener">HealthSherpa Medicare</a>
+            <a href="https://www.planenroll.com/AgentBio?purl=Patrick-Mackin" class="px-5 py-3 rounded-full glass font-semibold hover:shadow-lg transition" target="_blank" rel="noopener">PlanEnroll Profile</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-sky-400/30 blur-3xl"></div>
+          <div class="absolute -left-10 -bottom-14 w-40 h-40 rounded-full bg-fuchsia-400/25 blur-3xl"></div>
+          <div class="glass rounded-2xl p-6 border border-sky-200/20">
+            <p class="text-sm text-slate-100/70">Integrated support</p>
+            <p class="text-3xl font-bold mt-2">Medicare • ACA • Off-Exchange</p>
+            <p class="text-slate-100/75 mt-3">We coordinate mixed-plan households—aligning Medicare choices with ACA, ICHRA, or off-exchange coverage when needed.</p>
+            <div class="mt-5 grid grid-cols-2 gap-3 text-sm">
+              <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://medicare.healthsherpa.com/intake/patrick-mackin" target="_blank" rel="noopener">Medicare Intake</a>
+              <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://pmackiniv.github.io/vital-edge-HealthSherpa/" target="_blank" rel="noopener">ACA Funnel</a>
+              <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://www.healthsherpa.com/agents/patrick-mackin-iv/enrollment_leads?_agent_id=patrick-mackin-iv&enrollment_leads%5Barchived%5D=not_archived&enrollment_leads%5BoffEx%5D=false&enrollment_leads%5Bexchange%5D%5B%5D=onEx&enrollment_leads%5BsharedBook%5D=false&enrollment_leads%5BfullBook%5D=false&enrollment_leads%5Bsearch%5D=true&term=&desc%5B%5D=lead_updated_at&agent_id=patrick-mackin-iv&page=1&per_page=10" target="_blank" rel="noopener">ACA On-Exchange</a>
+              <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://www.planenroll.com/AgentBio?purl=Patrick-Mackin" target="_blank" rel="noopener">PlanEnroll</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14 grid lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 glass rounded-3xl p-8 space-y-4">
+        <p class="section-heading text-xs text-sky-100">What to expect</p>
+        <h3 class="text-3xl font-bold">Clarity, compliance, and caregiver support.</h3>
+        <ul class="space-y-3 text-slate-100/85 list-disc list-inside">
+          <li>Needs assessment for Parts A, B, C, D, Medigap, and drug formularies.</li>
+          <li>Coordination with ACA/ICHRA/off-exchange policies for households.</li>
+          <li>Documentation guidance to avoid delays or penalties.</li>
+          <li>Agent visibility with consistent updates and checkpoints.</li>
+        </ul>
+        <div class="grid sm:grid-cols-2 gap-3 text-sm font-semibold pt-2">
+          <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://medicare.healthsherpa.com/intake/patrick-mackin" target="_blank" rel="noopener">Start Medicare Intake</a>
+          <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://www.planenroll.com/AgentBio?purl=Patrick-Mackin" target="_blank" rel="noopener">PlanEnroll Support</a>
+          <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://pmackiniv.github.io/vital-edge-HealthSherpa/" target="_blank" rel="noopener">ACA Funnel (household mix)</a>
+          <a class="glass rounded-xl p-3 hover:shadow-lg transition" href="https://www.healthsherpa.com/agents/patrick-mackin-iv/enrollment_leads?_agent_id=patrick-mackin-iv&enrollment_leads%5Barchived%5D=not_archived&enrollment_leads%5BoffEx%5D=false&enrollment_leads%5Bexchange%5D%5B%5D=onEx&enrollment_leads%5BsharedBook%5D=false&enrollment_leads%5BfullBook%5D=false&enrollment_leads%5Bsearch%5D=true&term=&desc%5B%5D=lead_updated_at&agent_id=patrick-mackin-iv&page=1&per_page=10" target="_blank" rel="noopener">ACA On-Exchange</a>
+        </div>
+      </div>
+      <div class="glass rounded-3xl p-8 space-y-4">
+        <p class="section-heading text-xs text-sky-100">Agent Mode</p>
+        <h4 class="text-2xl font-bold">Operability checklist</h4>
+        <ul class="space-y-2 text-slate-100/90 list-disc list-inside">
+          <li>Medicare intake opens with agent attribution.</li>
+          <li>PlanEnroll profile reachable for cross-plan consultations.</li>
+          <li>ACA links available for mixed-plan families.</li>
+          <li>CTA buttons open in secure tabs with rel="noopener".</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="mission" class="mt-14 glass rounded-3xl p-8">
+      <p class="section-heading text-xs text-sky-100">Mission</p>
+      <h3 class="text-3xl font-bold">Serving seniors and caregivers with speed and empathy.</h3>
+      <p class="text-slate-100/85 mt-3">We simplify Medicare choices, align them with broader household coverage, and keep agents leading each step for clarity and trust.</p>
+    </section>
   </main>
+
+  <footer class="max-w-6xl mx-auto px-6 pb-10 mt-12 flex flex-col md:flex-row md:items-center md:justify-between text-sm text-slate-200/80">
+    <div>
+      <p class="font-semibold">Vital Edge Insurance</p>
+      <p>Medicare expertise with agent-first service.</p>
+    </div>
+    <div class="flex gap-4 mt-4 md:mt-0">
+      <a class="hover:text-white" href="index.html">Home</a>
+      <a class="hover:text-white" href="aca.html">ACA</a>
+      <a class="hover:text-white" href="https://medicare.healthsherpa.com/intake/patrick-mackin" target="_blank" rel="noopener">Medicare Intake</a>
+      <a class="hover:text-white" href="https://www.planenroll.com/AgentBio?purl=Patrick-Mackin" target="_blank" rel="noopener">PlanEnroll</a>
+    </div>
+  </footer>
 </body>
 </html>
